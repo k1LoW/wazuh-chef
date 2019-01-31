@@ -55,7 +55,7 @@ end
 include_recipe 'wazuh::common'
 
 template "#{node['ossec']['dir']}/etc/local_internal_options.conf" do
-  source 'var/ossec/etc/agent_local_internal_options.conf'
+  source node['ossec']['agent_local_internal_options_conf']['template_source']
   owner 'root'
   group 'ossec'
   action :create

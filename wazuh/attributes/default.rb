@@ -332,3 +332,9 @@ default['ossec']['conf']['all']['localfile'] = [
 #         }
 #       }
 #]
+
+default['ossec']['agent_local_internal_options_conf'] = [
+  {
+    'template_source' => 'var/ossec/etc/agent_local_internal_options.conf'
+  }
+]
